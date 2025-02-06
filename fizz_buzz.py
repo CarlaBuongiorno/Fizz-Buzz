@@ -1,5 +1,6 @@
-def fizz_buzz():
-    pass
+def fizz_buzz(number):
+    if number / 3:
+        return 'Fizz'
 
 
 
@@ -33,17 +34,21 @@ Setting up pytest...??? How?
  - `sudo apt install python3-pytest` installs it globally on my machine - whether or not you're in your venv
  
 Do I need to import pytest?
-Not always:
-
+ - Not always: pytest is the name of a program that you run for tests, it is also the name of a module.
+ - When you only use it to run test, import is not necessary.
 When do I need to import pytest exactly?
+ - When you use methods from the pytest module, then import pytest. (eg. pytest raises)
 
 How do I run tests in the terminal?
-pytest
+ - `pytest`
 
 How do I add repo to GitHub?
+ - On GitHub -> `New`
+                `Name your repo`
+                `Follow bottom prompts to connect local and remote repo`
 
 Do I need a token? When and Why?
-
+ - New rule, you always need a token when you push from the terminal.
 
 
 Tomorrow thing -> venv big pink banner
