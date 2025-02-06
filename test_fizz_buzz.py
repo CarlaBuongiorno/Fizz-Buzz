@@ -7,3 +7,7 @@ def test_fizz_buzz_exists():
 def test_fizz():
     fizz = fizz_buzz(3)
     assert fizz == 'Fizz'
+
+def test_no_fizz_return_number():
+    number = fizz_buzz(1)
+    assert number == 1
