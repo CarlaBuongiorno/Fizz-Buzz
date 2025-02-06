@@ -11,3 +11,7 @@ def test_fizz():
 def test_no_fizz_return_number():
     number = fizz_buzz(1)
     assert number == 1
+
+def test_buzz():
+    buzz = fizz_buzz(5)
+    assert buzz == 'Buzz'
