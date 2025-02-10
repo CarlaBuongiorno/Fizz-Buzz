@@ -1,3 +1,8 @@
+# Write a FizzBuzz function that takes a number, and returns a list of strings,
+# each containing one "number". What's FizzBuzz?
+# https://en.wikipedia.org/wiki/Fizz_buzz
+ 
+
 def main():
   fizz_buzz = fizz_buzz_checker(1)
   print(fizz_buzz)
@@ -8,8 +13,8 @@ def fizz_buzz_checker(number):
               (fizz, 'Fizz'),
               (buzz, 'Buzz'),)
 
-    for fizzbuzz_func, txt in checks:
-        if fizzbuzz_func(number):
+    for func, txt in checks:
+        if func(number):
             number = txt
             break
     return number

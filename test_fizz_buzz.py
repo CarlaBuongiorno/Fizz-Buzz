@@ -5,17 +5,17 @@ def test_fizz_buzz_checker_exists():
     assert fizz_buzz_checker
 
 def test_fizz_buzz():
-    fizz_buzz = fizz_buzz_checker(15)
-    assert fizz_buzz == 'Fizz Buzz'
+    helper_function(15, 'Fizz Buzz')
 
 def test_fizz():
-    fizz = fizz_buzz_checker(3)
-    assert fizz == 'Fizz'
+    helper_function(3, 'Fizz')
 
 def test_buzz():
-    buzz = fizz_buzz_checker(5)
-    assert buzz == 'Buzz'
+    helper_function(5, 'Buzz')
 
 def test_no_fizzbuzz_return_number():
-    number = fizz_buzz_checker(1)
-    assert number == 1
+    helper_function(1, 1)
+
+def helper_function(number, txt):
+    fizz_buzz = fizz_buzz_checker(number)
+    assert txt == fizz_buzz
