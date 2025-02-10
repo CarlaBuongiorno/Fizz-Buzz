@@ -1,21 +1,21 @@
 import pytest
-from fizz_buzz import fizz_buzz
+from fizz_buzz import fizz_buzz_checker
 
-def test_fizz_buzz_exists():
-    assert fizz_buzz
+def test_fizz_buzz_checker_exists():
+    assert fizz_buzz_checker
 
-def test_fizz_for_multiple_of_3():
-    fizz = fizz_buzz(3)
+def test_fizz_buzz():
+    fizz_buzz = fizz_buzz_checker(15)
+    assert fizz_buzz == 'Fizz Buzz'
+
+def test_fizz():
+    fizz = fizz_buzz_checker(3)
     assert fizz == 'Fizz'
 
-def test_no_fizz_return_number():
-    number = fizz_buzz(1)
-    assert number == 1
-
-def test_buzz_for_multiple_of_5():
-    buzz = fizz_buzz(5)
+def test_buzz():
+    buzz = fizz_buzz_checker(5)
     assert buzz == 'Buzz'
 
-def test_fizz_buzz_for_multiple_of_3_and_5():
-    fizzbuzz = fizz_buzz(15)
-    assert fizzbuzz == 'Fizz Buzz'
+def test_no_fizzbuzz_return_number():
+    number = fizz_buzz_checker(1)
+    assert number == 1

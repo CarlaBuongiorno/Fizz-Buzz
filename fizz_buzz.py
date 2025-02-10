@@ -1,11 +1,34 @@
-def fizz_buzz(number):
-    if number % 3 == 0 and number % 5 == 0:
-        return 'Fizz Buzz'
-    if number % 3 == 0:
-        return 'Fizz'
-    if number % 5 == 0:
-        return 'Buzz'
+def main():
+  fizz_buzz = fizz_buzz_checker(1)
+  print(fizz_buzz)
+
+
+def fizz_buzz_checker(number):
+    checks = ((fizz_buzz, 'Fizz Buzz'),
+              (fizz, 'Fizz'),
+              (buzz, 'Buzz'),)
+
+    for fizzbuzz_func, txt in checks:
+        if fizzbuzz_func(number):
+            number = txt
+            break
     return number
+
+
+def fizz_buzz(number):
+    return number % 3 == 0 and number % 5 == 0
+
+
+def fizz(number):
+    return number % 3 == 0
+
+
+def buzz(number):
+    return number % 5 == 0
+
+
+if __name__ == "__main__":
+    main()
 
 
 '''
