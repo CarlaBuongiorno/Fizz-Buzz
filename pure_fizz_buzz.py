@@ -14,7 +14,11 @@ def fizz_buzz_checker(number):
         if func(number):
             number = txt
             break
-    return [str(number)]
+    return number
+
+
+def fizz_buzz_list(number):
+    return [str(n) for n in range(1, number + 1)]
 
 
 def fizz_buzz(number):
