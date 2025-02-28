@@ -5,14 +5,14 @@
 from pure_fizz_buzz import (
    get_number,
    fizz_buzz_checker,
-   fizz_buzz_list
+   fizz_buzz_list,
   )
 
 def main():
-  # number = get_number()
-  fizz_buzz = fizz_buzz_checker(2)
-  fizzbuzz_list_of_strings = fizz_buzz_list(fizz_buzz)
-  print(fizzbuzz_list_of_strings)
+  number = get_number()
+  number_list = fizz_buzz_list(number)
+  fizzbuzz_list = fizz_buzz_checker(number_list)
+  print(fizzbuzz_list)
 
 
 if __name__ == "__main__":
