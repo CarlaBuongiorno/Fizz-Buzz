@@ -10,26 +10,32 @@ def main():
     print(fizzbuzz)
     
 
-# def fizz_buzz(number):
-#     if number % 5 == 0 and number % 3 == 0:
-#         fizzbuzz = list(range(1, number + 1))
-#         number = 'Fizz Buzz'
-#         print(fizzbuzz)
-#     return number
-
-
 def fizz_buzz(number):
-    fizz_buzz_list = []
-    for i in range(1, number + 1):
-        if i % 5 == 0 and i % 3 == 0:
-            fizz_buzz_list.append(f'FizzBuzz')
-        elif i % 3 == 0:
-            fizz_buzz_list.append(f'Fizz')
-        elif i % 5 == 0:
-            fizz_buzz_list.append(f'Buzz')
+    fizzbuzz = list(range(1, number + 1))
+    for index, number in enumerate(fizzbuzz):
+        if number % 5 == 0 and number % 3 == 0:
+            fizzbuzz[index] = 'FizzBuzz'
+        elif number % 3 == 0:
+            fizzbuzz[index] = 'Fizz'
+        elif number % 5 == 0:
+            fizzbuzz[index] = 'Buzz'
         else:
-            fizz_buzz_list.append(str(i))
-    return fizz_buzz_list
+            fizzbuzz[index] = str(number)
+    return fizzbuzz
+
+
+# def fizz_buzz(number):
+#     fizz_buzz_list = []
+#     for i in range(1, number + 1):
+#         if i % 5 == 0 and i % 3 == 0:
+#             fizz_buzz_list.append(f'FizzBuzz')
+#         elif i % 3 == 0:
+#             fizz_buzz_list.append(f'Fizz')
+#         elif i % 5 == 0:
+#             fizz_buzz_list.append(f'Buzz')
+#         else:
+#             fizz_buzz_list.append(str(i))
+#     return fizz_buzz_list
 
 
 if __name__ == "__main__":
