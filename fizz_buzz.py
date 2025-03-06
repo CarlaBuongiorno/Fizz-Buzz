@@ -10,7 +10,7 @@ from pure_fizz_buzz import (
   )
 
 def main():
-#   number = get_number()
+    # number = get_number()
     number = int(input("Pick a number for FizzBuzz from 1 to 50: "))
     fizzbuzz = fizz_buzz(number)
     print(fizzbuzz)
