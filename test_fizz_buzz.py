@@ -1,4 +1,3 @@
-import pytest
 from now_follow_instructions import fizz_buzz
 # from fizz_buzz import fizz_buzz_list, fizz_buzz_checker
 
