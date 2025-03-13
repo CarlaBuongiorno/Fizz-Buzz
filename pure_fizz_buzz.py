@@ -12,17 +12,17 @@ def fizz_buzz(number):
     return fizzbuzz_list
 
 
-def fizz_buzz_checker(number_list):
+def fizz_buzz_checker(fizzbuzz):
     CHECKS = ((fizz_and_buzz, 'Fizz Buzz'),
               (fizz, 'Fizz'),
               (buzz, 'Buzz'),)
 
-    for index, (number) in enumerate(number_list):
+    for number in fizzbuzz:
         for func, txt in CHECKS:
-            if func(int(number)):
-                number_list[index] = txt
+            if func(number):
+                fizzbuzz[number-1] = txt
                 break
-    return number_list
+    return fizzbuzz
 
 
 def fizz_and_buzz(number):
